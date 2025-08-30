@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #010B13;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+}
+
+section {
+  display: block;
+  padding: 5vw 5%; 
+  text-align: center;
+}
+
+section:first-of-type {
+  border-bottom: 1px solid #222; 
+}
+
+h1 {
+  margin: 0;
+  color: #006A4F;
+  font-size: clamp(28px, 5vw, 67px); 
+  line-height: 1.2;
+}
+
+p {
+  font-size: clamp(16px, 2.5vw, 30px);
+  margin: 5px 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8em 1.5em; 
+  border-radius: 10px;
+  background-color: #006A4F;
+  border: none;
+  color: #fff;
+  margin: 20px 15px;
+  font-size: clamp(14px, 2vw, 18px);
+  font-weight: 600;
+  text-decoration: none; 
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+  
+.btn:hover {
+  background-color: #009B75;
+  cursor: pointer;
+  transform: translateY(-2px);
+}
+
+/* About Section */
+#about {
+  text-align: left;
+}
+
+section:nth-of-type(2) {
+  border-bottom: 1px solid #222; 
+}
+
+#art h1 {
+  display: block;
+  color: #006A4F;
+  font-size: clamp(28px, 5vw, 67px);
+  line-height: 1.2;
+  text-align: center;
+}
+
+#art {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-bottom: 1px solid #222;
+}
+
+#container {
+  background-color: gray;
+  margin: 20px;              
+  padding: 15px;
+  border-radius: 8px;
+  width: auto;  
+  box-sizing: border-box;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px; 
+  justify-content: center;
+}
+
+.grid img {
+  flex: 1 1 calc(50% - 15px); 
+  max-width: calc(50% - 15px);
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+#Contact h1 {
+  display: block;
+  text-align: center;
+}
+
+#Contact p {
+  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#Contact p:nth-of-type(2) {
+  text-align: left;
+  color: #006A4F;
+}
+
+#Contact a {
+  padding: 0 20px;
+  display: inline-flex;
+  color: #006A4F;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  font-size: clamp(16px, 3vw, 30px);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+#Contact a:hover {
+  color: #009b75;
+  cursor: pointer;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 900px) {
+  .grid img {
+    flex: 1 1 calc(100% - 15px);
+    max-width: 100%;
+  }
+
+  section {
+    padding: 8vw 5%;
+  }
+}
+
+@media (max-width: 600px) {
+  .btn {
+    display: block;
+    width: 100%; 
+    margin: 10px 0;
+  }
+
+  #about {
+    text-align: center; 
+  }
+
+  #Contact a {
+    flex-direction: column; 
+    font-size: 20px;
+  }
+}
